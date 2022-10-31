@@ -3,9 +3,11 @@
     --clr-gray-med: #616b74;
     --clr-gray-dark: #414b56;
     --clr-link: #4d97b2;
-    --clr-popular: #747474;
-    --clr-technology: #651fff;
-    --clr-psychology: #e85808;
+    --clr-popular: #00e353;
+    --clr-technology: #ffdd00;
+    --clr-aquatics: #00fffb;
+    --clr-sports: #ff0000;
+ 
   }
 
   *{box-sizing: border-box;
@@ -14,8 +16,72 @@
     padding: 0;
   }
 
+  footer {
+    text-align: center;
+    padding: 3px;;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    z-index: +1;
+    width: 100%;
+    bottom: 0;
+
+  }
+
+  .recent{
+    border-top: .25rem double  black;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Comfortaa', cursive;
+    height: 2rem;
+    margin-top: 3rem;
+    width:80%;
+    margin: auto;
+    
+  }
+
+  .space{
+    height: 3rem;
+
+  }
+
   
-  
+
+  .carousel-item{
+      height:32rem;
+      background: rgb(0, 0, 0);
+      text-align: center;
+      color: white;
+      position: relative;
+      background-color:rgba(0,0,0,0.2);
+
+  }
+
+  .carousel-container{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+    color: white;
+    background-color:rgba(0,0,0,0.4);
+
+  }
+
+  .overlay-image{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.75;
+    
+
+  }
+
+
   .mobile-container {
  
   }
@@ -23,20 +89,28 @@
   .topnav2 {
     overflow: hidden;
     background-color: #333;
-    position: relative;
-    
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: +2;
   }
   
   .topnav2 #myLinks {
     display: none;
+      
+    
   }
   
   .topnav2 a {
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1rem;
     display: block;
+    background-color: rgb(0, 0, 0);
+
+
   }
   
   .topnav2 a.icon {
@@ -53,7 +127,7 @@
   }
   
   .active {
-    background-color:#ff000442;
+    background-color:#00000042;
     color: rgba(255, 255, 255, 0.244);
 
 
@@ -63,7 +137,7 @@
     margin:2rem;
     color:var(--clr-gray-dark);
     
-    background-image: linear-gradient(to top left,#a9a9a9a1,#efefef, #00d0ff70);
+    background-image: linear-gradient(to top left,#ffffff,#ffffff, #ffffff);
   }
 
   .wrapper{
@@ -81,6 +155,7 @@
     position:relative;
     width:350px;
     margin:1rem;
+    margin-top: 5rem;
     transition:250ms all ease-in-out;
     cursor:pointer;
     color: #ff000483;
@@ -95,9 +170,10 @@
     position:relative;
     width:400px;
     margin:1.5rem;
-    margin-top: 40px;
+    margin-top: 50px;
     transition:250ms all ease-in-out;
     cursor:pointer;
+    
   }
 
   .card:hover{
@@ -140,7 +216,7 @@
   .sports{
     background:var(--clr-sports);
   }
-  .sports{
+  .aquatics{
     background:var(--clr-aquatics);
   }
 
@@ -192,9 +268,15 @@
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #ff000461;
-
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0px 4px 6px -6px #888888;
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: +2;
   
 }
 
@@ -202,11 +284,12 @@
 .topnav a {
   float: right;
   display: block;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
-  padding: 14px 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1rem;
   font-family: 'Orbitron', sans-serif;
 }
 
@@ -214,6 +297,8 @@
 .topnav a:hover {
   background-color: #ddd;
   color: black;
+  transform:scale(1.2);
+  transition-duration: 300ms;
 }
 
 /* Add an active class to highlight the current page */
@@ -282,13 +367,35 @@
 }
 
 .information-display {
-  background-color: rgba(165, 165, 165, 0.354);
+  background-color: rgba(165, 165, 165, 0);
   height: 500px;
-  width: 600px;
+  width: 100%;
   margin-top: 50px;
   color: black;
+  box-shadow:0px 2px 20px var(--clr-gray-light);
+  border-radius:.5rem;
+  font-size: 1rem;
+  z-index: -1;
+  position: relative;
 
 }
+
+.information-display1 {
+  background-color: rgba(165, 165, 165, 0);
+  height: 500px;
+  width: 100%;
+  margin-top: 50px;
+  color: black;
+  box-shadow:0px 2px 20px var(--clr-gray-light);
+  border-radius:.5rem;
+  font-size: 1rem;
+
+}
+
+
+
+
+
 .header-display{
   background-color: transparent;
   height: 100px;
@@ -296,8 +403,24 @@
   text-align: center;
   font-family: 'Sacramento', cursive;
   font-size: 40px;
-  color: rgba(255, 0, 0, 0.502);
+  color: rgb(0, 0, 0)
 }
+
+.webpage-description{
+  background-color: transparent;
+  width: 600px;
+  color: black;
+  height:600px;
+  margin:50px;
+  text-align: center;
+  font-size: 2.25rem;
+  font-family: 'Comfortaa', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 @media screen and (min-width: 601px) {
   .topnav2{
@@ -310,9 +433,13 @@
 }
 
 @media screen and (max-width: 600px) {
+
   .topnav{
     display:none;
   }  
+  .space{
+    height: 0rem;
+  }
   .mobile-container{
     height: 0px;
     margin-bottom: 10px;
@@ -328,8 +455,9 @@
     font-size: 2.5vw;
   }
   .bigcard{
-    width:85%;
+    width:75%;
     font-size: 2.3vw;
+    
   }
   .blog-description{
     font-size: 2.5vw;
